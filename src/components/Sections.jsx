@@ -1,7 +1,27 @@
 // ─── BENEFITS ────────────────────────────────────────────────────────────────
 import { benefits, team } from "../data/content";
-import { SectionLabel } from "./Speakers";
 import { Link } from "react-router-dom";
+
+export function SectionLabel({ tag, title, sub }) {
+  return (
+    <div className="reveal" style={{ textAlign: "center", marginBottom: 64 }}>
+      <div style={{
+      }}>{tag}</div>
+      <h2 style={{
+        fontFamily: "var(--font-display)", fontSize: "clamp(32px, 4vw, 48px)",
+        fontWeight: 900, marginBottom: 16, letterSpacing: "-1.5px", lineHeight: 1.1,
+        color: "var(--orange)",
+      }}>{title}</h2>
+      {sub && (
+        <p className="soft-text" style={{
+          fontSize: "clamp(12px, 1.2vw, 14px)",
+          maxWidth: 500, margin: "0 auto",
+          fontFamily: "var(--font-display)",
+        }}>{sub}</p>
+      )}
+    </div>
+  );
+}
 
 export function Benefits() {
   return (
@@ -12,7 +32,7 @@ export function Benefits() {
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <SectionLabel
           tag="Why Attend"
-          title="Everything you need to teach globally"
+          title="Everything you gain at T4Teaching"
           sub="T4Teaching gives you the skills, network, and placements to make your mark in classrooms worldwide."
         />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 16 }}>
@@ -54,37 +74,53 @@ export function Team() {
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         <SectionLabel
           tag="Organizing Team"
-          title="The people behind T4Teaching"
-          sub="A passionate AIESEC crew making this event unforgettable."
+          title="Project Heads"
+          sub="Meet the dedicated individuals behind the event."
         />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14 }}>
           {team.map((member, i) => {
-            const color = AVATAR_COLORS[i % AVATAR_COLORS.length];
             return (
-              <div key={member.id} className={`reveal reveal-delay-${(i % 3) + 1}`}
+              <div
+                key={member.id}
+                className={`reveal reveal-delay-${(i % 3) + 1}`}
                 style={{
-                  background: "var(--bg-card)", border: "0.5px solid var(--border)",
-                  borderRadius: 14, padding: "24px 20px", textAlign: "center",
-                  transition: "border-color 0.25s, transform 0.25s",
+                  background: "var(--bg-card)",
+                  border: "0.5px solid var(--border)",
+                  borderRadius: 12,
+                  padding: "14px",
+                  textAlign: "center",
+                  transition: "all 0.2s",
                 }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(232,118,26,0.48)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
-                <div style={{
-                  width: 64, height: 64, borderRadius: "50%",
-                  background: `${color}22`, border: `1.5px solid ${color}55`,
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  fontFamily: "var(--font-display)", fontWeight: 800,
-                  fontSize: 20, color, margin: "0 auto 14px",
-                }}>{member.avatar}</div>
-                <div style={{ fontSize: 11, color: "var(--text-muted)", marginBottom: 4 }}>
-                  {member.flag} {member.country}
+                {/* Smaller contained photo */}
+                <div style={{ padding: "10px", textAlign: "center" }}>
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    style={{
+                      width: "100%",
+                      height: "90px",
+                      objectFit: "contain",
+                      marginBottom: 8,
+                    }}
+                  />
                 </div>
-                <h3 style={{
-                  fontFamily: "var(--font-display)", fontSize: 16,
-                  fontWeight: 800, marginBottom: 4, letterSpacing: "-0.2px",
-                }}>{member.name}</h3>
-                <p style={{ fontSize: 13, color: "var(--orange)", fontWeight: 700 }}>{member.role}</p>
+
+                <h3 style={{ fontSize: 14, fontWeight: 800, marginBottom: 4 }}>
+                  {member.name}
+                </h3>
+
+                <p style={{ fontSize: 12, color: "var(--orange)", fontWeight: 700, marginBottom: 6 }}>
+                  {member.role}
+                </p>
+
+                <p style={{ fontSize: 12, marginBottom: 2 }}>
+                  {member.phone}
+                </p>
+
+                <p style={{ fontSize: 11, color: "var(--text-muted)" }}>
+                  {member.email}
+                </p>
               </div>
             );
           })}
@@ -93,6 +129,9 @@ export function Team() {
     </section>
   );
 }
+
+
+
 
 // ─── CTA ─────────────────────────────────────────────────────────────────────
 export function CTA() {
@@ -141,10 +180,11 @@ export function CTA() {
             <span style={{ color: "var(--orange)" }}>teach the world?</span>
           </h2>
 
-          <p className="reveal" style={{
-            fontSize: 17, color: "var(--text-muted)",
+          <p style={{
+            fontSize: "clamp(12px, 1.2vw, 14px)",
             maxWidth: 460, margin: "0 auto 40px",
-            lineHeight: 1.6, fontFamily: "var(--font-serif)", fontStyle: "italic",
+            fontFamily: "var(--font-display)", color: "var(--text-muted)",
+            fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase",
           }}>
             Join passionate educators at T4Teaching. Spots fill fast — register now and take the first step toward your global classroom.
           </p>
@@ -198,15 +238,15 @@ export function CTA() {
 
 // ─── FOOTER ──────────────────────────────────────────────────────────────────
 const FOOTER_LINKS = [
-  { section: "Event",   items: ["About", "Speakers", "Agenda", "Opportunities"] },
-  { section: "AIESEC",  items: ["Global Teacher", "About AIESEC", "Alumni", "Contact"] },
-  { section: "Legal",   items: ["Privacy Policy", "Terms of Use"] },
+  { section: "Event", items: ["About", "Theme", "Benefits", "Team"] },
+  { section: "AIESEC", items: ["Global Teacher", "About AIESEC", "Alumni", "Contact"] },
+  { section: "Legal", items: ["Privacy Policy", "Terms of Use"] },
 ];
 
 const SOCIALS = [
-  { name: "LinkedIn", href: "#", icon: <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg> },
-  { name: "Instagram", href: "#", icon: <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg> },
-  { name: "Facebook",  href: "#", icon: <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> },
+  { name: "LinkedIn", href: "#", icon: <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" /></svg> },
+  { name: "Instagram", href: "#", icon: <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" /></svg> },
+  { name: "Facebook", href: "#", icon: <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg> },
 ];
 
 export function Footer() {
@@ -224,7 +264,7 @@ export function Footer() {
             <p style={{
               fontSize: 14, color: "var(--text-muted)",
               lineHeight: 1.65, maxWidth: 270, marginBottom: 20,
-              fontFamily: "var(--font-serif)", fontStyle: "italic",
+              fontFamily: "var(--font-display)", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase",
             }}>
               An AIESEC Global Teacher micro-event empowering young educators to teach, grow, and impact the world.
             </p>
@@ -267,7 +307,7 @@ export function Footer() {
           alignItems: "center", flexWrap: "wrap", gap: 12,
         }}>
           <p style={{ fontSize: 13, color: "var(--text-faint)" }}>
-            © 2025 AIESEC · T4Teaching. All rights reserved.
+            © 2026 AIESEC · T4Teaching. All rights reserved.
           </p>
           <p style={{ fontSize: 13, color: "var(--text-faint)" }}>Tunis, Tunisia 🇹🇳</p>
         </div>
@@ -275,3 +315,15 @@ export function Footer() {
     </footer>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,6 @@
 // ─── SPEAKERS ───────────────────────────────────────────────────────────────
+import heithem from "../assets/heithem.png";
+import salah from "../assets/salah.png";
 export const speakers = [
   {
     id: 1,
@@ -48,12 +50,22 @@ export const speakers = [
 
 // ─── ORGANIZING TEAM ────────────────────────────────────────────────────────
 export const team = [
-  { id: 1, name: "Sana Mejri",      role: "Event Director",       avatar: "SM", country: "Tunisia", flag: "🇹🇳" },
-  { id: 2, name: "Khalil Brini",    role: "Marketing Lead",       avatar: "KB", country: "Tunisia", flag: "🇹🇳" },
-  { id: 3, name: "Dorra Hamdi",     role: "Partnerships Manager", avatar: "DH", country: "Tunisia", flag: "🇹🇳" },
-  { id: 4, name: "Mehdi Jouini",    role: "Logistics Lead",       avatar: "MJ", country: "Tunisia", flag: "🇹🇳" },
-  { id: 5, name: "Ines Karoui",     role: "Speaker Relations",    avatar: "IK", country: "Tunisia", flag: "🇹🇳" },
-  { id: 6, name: "Youssef Abidi",   role: "Digital Experience",   avatar: "YA", country: "Tunisia", flag: "🇹🇳" },
+  {
+    id: 1,
+    name: "HEITHEM HENIA",
+    role: "PROJECT HEAD",
+    phone: "+216 55373077",
+    email: "helthem1200@gmail.com",
+    photo: heithem,
+  },
+  {
+    id: 2,
+    name: "MED SALAH TOUATI",
+    role: "PROJECT HEAD",
+    phone: "+216 29486814",
+    email: "mohamedsalahtouati@aiesec.net",
+    photo: salah,
+  },
 ];
 
 // ─── AGENDA ─────────────────────────────────────────────────────────────────

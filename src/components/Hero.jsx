@@ -9,7 +9,7 @@ const STATS = [
 ];
 
 function Countdown() {
-  const deadline = new Date("2025-06-10T09:00:00");
+  const deadline = new Date("2026-04-18T09:00:00");
   const [time, setTime] = useState({ d: 0, h: 0, m: 0, s: 0 });
 
   useEffect(() => {
@@ -107,7 +107,7 @@ export default function Hero() {
           display: "inline-block",
           boxShadow: "0 0 0 3px rgba(232,118,26,0.25)",
         }} />
-        AIESEC GLOBAL TEACHER PROGRAM · JUNE 10–11, 2025
+        AIESEC T4TEACHING EVENT 4.0 · APRIL 18, 2026
       </div>
 
       {/* Headline */}
@@ -121,7 +121,7 @@ export default function Hero() {
         maxWidth: 860,
         animationDelay: "0.1s", opacity: 0, animationFillMode: "forwards",
       }}>
-        Teach the world.<br />
+        <span style={{ color: "var(--text-muted)" }}>Teach</span> the world.<br />
         Change a{" "}
         <span style={{ position: "relative", display: "inline-block" }}>
           <span style={{ color: "var(--orange)" }}>classroom.</span>
@@ -134,14 +134,11 @@ export default function Hero() {
       </h1>
 
       {/* Subtext */}
-      <p className="animate-fade-up" style={{
-        fontSize: "clamp(15px, 2vw, 18px)",
-        color: "var(--text-muted)",
-        maxWidth: 540,
-        lineHeight: 1.75,
+      <p className="animate-fade-up soft-text" style={{
+        fontSize: "clamp(12px, 1.2vw, 14px)",
+        maxWidth: 620,
         marginBottom: 44,
-        fontFamily: "var(--font-serif)",
-        fontStyle: "italic",
+        fontFamily: "var(--font-display)",
         animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards",
       }}>
         T4Teaching is AIESEC's micro-event for aspiring global educators — connecting passionate young people aged 18–30 with real international teaching opportunities in 60+ countries.
@@ -168,21 +165,7 @@ export default function Hero() {
             Register Free →
           </button>
         </Link>
-        <button
-          onClick={() => document.querySelector("#agenda")?.scrollIntoView({ behavior: "smooth" })}
-          style={{
-            background: "transparent", color: "#fff",
-            border: "0.5px solid rgba(255,255,255,0.18)",
-            padding: "15px 30px", borderRadius: 10,
-            fontSize: 15, fontWeight: 600,
-            fontFamily: "var(--font-body)",
-            cursor: "pointer", transition: "all 0.2s",
-          }}
-          onMouseEnter={e => e.target.style.borderColor = "rgba(232,118,26,0.55)"}
-          onMouseLeave={e => e.target.style.borderColor = "rgba(255,255,255,0.18)"}
-        >
-          View Agenda
-        </button>
+
       </div>
 
       {/* Countdown */}

@@ -11,8 +11,8 @@
   --bg3:           #1A1109;
   --bg-card:       #161009;
   --text:          #FFFFFF;
-  --text-muted:    #A08060;
-  --text-faint:    #5A3E28;
+  --text-muted:    #E6D5C3;
+  --text-faint:    #A38C77;
   --border:        rgba(232,118,26,0.14);
   --border-subtle: rgba(255,255,255,0.05);
   --font-display:  'Nunito', sans-serif;
@@ -21,6 +21,21 @@
   --radius:        12px;
   --radius-sm:     8px;
   --radius-lg:     20px;
+}
+
+.soft-text {
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.soft-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(232,118,26,0.16);
+  border-radius: 22px;
+  padding: 18px 24px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

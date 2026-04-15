@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
+import logo from "../assets/logo.png";
 
 const FIELDS = [
   { id: "firstName",   label: "First Name",          type: "text",   placeholder: "Sana",             half: true  },
@@ -94,11 +95,18 @@ export default function Register() {
         background: "rgba(12,8,4,0.95)", backdropFilter: "blur(16px)",
         position: "sticky", top: 0, zIndex: 100,
       }}>
-        <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 8 }}>
-          <span style={{ fontSize: 18 }}>📖</span>
-          <span style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 900 }}>
-            T4<span style={{ color: "var(--orange)" }}>Teaching</span>
-          </span>
+        <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+          <img
+            src={logo}
+            alt="T4Teaching logo"
+            style={{
+              width: 120,
+              height: 40,
+              borderRadius: 8,
+              objectFit: "contain",
+              flexShrink: 0,
+            }}
+          />
         </Link>
         <Link to="/" style={{ textDecoration: "none", fontSize: 14, color: "var(--text-muted)" }}>
           ← Back to event
@@ -129,8 +137,12 @@ export default function Register() {
             Join <span style={{ color: "var(--orange)" }}>T4Teaching</span>
           </h1>
           <p style={{
-            color: "var(--text-muted)", fontSize: 16, lineHeight: 1.65,
-            fontFamily: "var(--font-serif)", fontStyle: "italic",
+            fontSize: "clamp(12px, 1.2vw, 14px)",
+            fontFamily: "var(--font-display)",
+            color: "var(--text-muted)",
+            fontWeight: 700,
+            letterSpacing: "0.07em",
+            textTransform: "uppercase",
           }}>
             Take 3 minutes to register — your global teaching journey starts here.
           </p>

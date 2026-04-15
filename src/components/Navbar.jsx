@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const NAV_LINKS = [
-  { label: "Speakers",      href: "#speakers"      },
-  { label: "Agenda",        href: "#agenda"        },
-  { label: "Opportunities", href: "#opportunities" },
+  { label: "Theme",         href: "#theme"         },
   { label: "Benefits",      href: "#benefits"      },
   { label: "Team",          href: "#team"          },
 ];
@@ -41,29 +40,27 @@ export default function Navbar() {
         height: 64,
         display: "flex", alignItems: "center", justifyContent: "space-between",
       }}>
-        {/* Logo */}
-        <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10 }}>
-          {/* Book icon replica */}
+        <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
+          <img
+            src={logo}
+            alt="T4Teaching logo"
+            style={{
+              width: 120,
+              height: 40,
+              borderRadius: 8,
+              objectFit: "contain",
+              flexShrink: 0,
+            }}
+          />
           <div style={{
-            width: 36, height: 36,
-            borderRadius: "50%",
-            background: "var(--orange)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: 18,
-            flexShrink: 0,
-          }}>📖</div>
-          <div>
-            <span style={{
-              fontFamily: "var(--font-display)",
-              fontSize: 18, fontWeight: 900,
-              color: "#fff", letterSpacing: "-0.3px",
-              lineHeight: 1,
-            }}>
-              T4<span style={{ color: "var(--orange)" }}>Teaching</span>
-            </span>
-            <div style={{ fontSize: 10, color: "var(--text-muted)", fontWeight: 400, lineHeight: 1, marginTop: 2 }}>
-              by AIESEC · Global Teacher
-            </div>
+            fontSize: 12,
+            color: "var(--text-muted)",
+            fontWeight: 600,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            opacity: 0.9,
+          }}>
+            AIESEC · Global Teacher
           </div>
         </Link>
 
@@ -89,22 +86,7 @@ export default function Navbar() {
           </ul>
         )}
 
-        <Link to="/register">
-          <button style={{
-            background: "var(--orange)",
-            color: "#fff", border: "none",
-            padding: "9px 22px", borderRadius: 8,
-            fontSize: 13, fontWeight: 700,
-            fontFamily: "var(--font-display)",
-            cursor: "pointer",
-            transition: "background 0.2s, transform 0.15s",
-          }}
-            onMouseEnter={e => { e.target.style.background = "var(--orange-bright)"; e.target.style.transform = "scale(1.04)"; }}
-            onMouseLeave={e => { e.target.style.background = "var(--orange)"; e.target.style.transform = "scale(1)"; }}
-          >
-            Register Free →
-          </button>
-        </Link>
+
       </nav>
       <style>{`@media(max-width:768px){.desktop-nav{display:none!important}}`}</style>
     </header>
