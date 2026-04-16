@@ -75,13 +75,13 @@ export const agenda = [
     date: "June 10, 2025",
     label: "Inspire",
     events: [
-      { time: "09:00", title: "Registration & Welcome Coffee",          type: "break"    },
+      { time: "09:00", title: "Registration & Welcome Coffee", type: "break" },
       { time: "10:00", title: "Opening Keynote — The Power of Teaching", type: "keynote" },
-      { time: "11:00", title: "Speaker: Dr. Fatima Zahra",              type: "talk"     },
-      { time: "12:30", title: "Networking Lunch",                       type: "break"    },
-      { time: "14:00", title: "Panel: Global Classrooms, Local Impact", type: "panel"    },
-      { time: "15:30", title: "Workshop: Adaptive Teaching Methods",    type: "workshop" },
-      { time: "17:00", title: "Evening Mixer & Close",                  type: "break"    },
+      { time: "11:00", title: "Speaker: Dr. Fatima Zahra", type: "talk" },
+      { time: "12:30", title: "Networking Lunch", type: "break" },
+      { time: "14:00", title: "Panel: Global Classrooms, Local Impact", type: "panel" },
+      { time: "15:30", title: "Workshop: Adaptive Teaching Methods", type: "workshop" },
+      { time: "17:00", title: "Evening Mixer & Close", type: "break" },
     ],
   },
   {
@@ -89,13 +89,13 @@ export const agenda = [
     date: "June 11, 2025",
     label: "Grow",
     events: [
-      { time: "09:30", title: "Morning Reflection & Icebreakers",       type: "break"    },
-      { time: "10:00", title: "Speaker: James Okonkwo",                 type: "talk"     },
-      { time: "11:15", title: "Speaker: Elena Vasquez",                 type: "talk"     },
-      { time: "12:30", title: "Lunch & Opportunity Fair",               type: "break"    },
-      { time: "14:00", title: "Workshop: Classroom to the World",       type: "workshop" },
-      { time: "15:30", title: "Speaker: Tariq Al-Rashid",               type: "talk"     },
-      { time: "17:00", title: "Closing Ceremony & Certificate Award",   type: "keynote"  },
+      { time: "09:30", title: "Morning Reflection & Icebreakers", type: "break" },
+      { time: "10:00", title: "Speaker: James Okonkwo", type: "talk" },
+      { time: "11:15", title: "Speaker: Elena Vasquez", type: "talk" },
+      { time: "12:30", title: "Lunch & Opportunity Fair", type: "break" },
+      { time: "14:00", title: "Workshop: Classroom to the World", type: "workshop" },
+      { time: "15:30", title: "Speaker: Tariq Al-Rashid", type: "talk" },
+      { time: "17:00", title: "Closing Ceremony & Certificate Award", type: "keynote" },
     ],
   },
 ];
@@ -179,32 +179,26 @@ export const opportunities = [
 // ─── BENEFITS ────────────────────────────────────────────────────────────────
 export const benefits = [
   {
-    icon: "📚",
     title: "Teach Globally",
     desc: "Get placed in real classrooms across 60+ countries and make a tangible impact on students' lives.",
   },
   {
-    icon: "🌍",
     title: "Cultural Exchange",
     desc: "Immerse yourself in a new culture, language, and way of life while sharing your own.",
   },
   {
-    icon: "🤝",
     title: "Mentorship Network",
     desc: "Connect with experienced educators and AIESEC alumni who've taught on every continent.",
   },
   {
-    icon: "🎓",
     title: "Certified Experience",
     desc: "Receive a recognized teaching certificate and reference letter to boost your academic profile.",
   },
   {
-    icon: "💡",
     title: "Pedagogy Workshops",
     desc: "Attend expert-led workshops on modern teaching methods, EdTech tools, and inclusive education.",
   },
   {
-    icon: "✈️",
     title: "Global Placement",
     desc: "Get priority access to AIESEC's Global Teacher placements in high-demand destinations.",
   },

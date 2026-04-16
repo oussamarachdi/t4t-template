@@ -46,12 +46,7 @@ export function Benefits() {
               onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(232,118,26,0.48)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
-              <div style={{
-                width: 50, height: 50, background: "var(--orange-dim)",
-                borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 24, marginBottom: 16,
-                border: "0.5px solid var(--orange-border)",
-              }}>{b.icon}</div>
+
               <h3 style={{
                 fontFamily: "var(--font-display)", fontSize: 18,
                 fontWeight: 800, marginBottom: 8, letterSpacing: "-0.3px",

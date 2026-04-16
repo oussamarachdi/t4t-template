@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const STATS = [
-  { num: "60",  suffix: "+", label: "Host Countries"  },
-  { num: "18",  suffix: "+", label: "Min Age"         },
-  { num: "2",   suffix: "",  label: "Power Days"      },
+  { num: "60", suffix: "+", label: "Host Countries" },
+  { num: "18", suffix: "+", label: "Min Age" },
   { num: "10K", suffix: "+", label: "Global Teachers" },
 ];
 
@@ -107,7 +106,7 @@ export default function Hero() {
           display: "inline-block",
           boxShadow: "0 0 0 3px rgba(232,118,26,0.25)",
         }} />
-        AIESEC T4TEACHING EVENT 4.0 · APRIL 18, 2026
+        AIESEC T4TEACHING EVENT · APRIL 18, 2026
       </div>
 
       {/* Headline */}
@@ -121,7 +120,7 @@ export default function Hero() {
         maxWidth: 860,
         animationDelay: "0.1s", opacity: 0, animationFillMode: "forwards",
       }}>
-        <span style={{ color: "var(--text-muted)" }}>Teach</span> the world.<br />
+        Teach the world.<br />
         Change a{" "}
         <span style={{ position: "relative", display: "inline-block" }}>
           <span style={{ color: "var(--orange)" }}>classroom.</span>
@@ -165,7 +164,21 @@ export default function Hero() {
             Register Free →
           </button>
         </Link>
-
+        <button
+          onClick={() => document.querySelector("#agenda")?.scrollIntoView({ behavior: "smooth" })}
+          style={{
+            background: "transparent", color: "#fff",
+            border: "0.5px solid rgba(255,255,255,0.18)",
+            padding: "15px 30px", borderRadius: 10,
+            fontSize: 15, fontWeight: 600,
+            fontFamily: "var(--font-body)",
+            cursor: "pointer", transition: "all 0.2s",
+          }}
+          onMouseEnter={e => e.target.style.borderColor = "rgba(232,118,26,0.55)"}
+          onMouseLeave={e => e.target.style.borderColor = "rgba(255,255,255,0.18)"}
+        >
+          View Agenda
+        </button>
       </div>
 
       {/* Countdown */}
