@@ -164,21 +164,7 @@ export default function Hero() {
             Register Free →
           </button>
         </Link>
-        <button
-          onClick={() => document.querySelector("#agenda")?.scrollIntoView({ behavior: "smooth" })}
-          style={{
-            background: "transparent", color: "#fff",
-            border: "0.5px solid rgba(255,255,255,0.18)",
-            padding: "15px 30px", borderRadius: 10,
-            fontSize: 15, fontWeight: 600,
-            fontFamily: "var(--font-body)",
-            cursor: "pointer", transition: "all 0.2s",
-          }}
-          onMouseEnter={e => e.target.style.borderColor = "rgba(232,118,26,0.55)"}
-          onMouseLeave={e => e.target.style.borderColor = "rgba(255,255,255,0.18)"}
-        >
-          View Agenda
-        </button>
+
       </div>
 
       {/* Countdown */}
