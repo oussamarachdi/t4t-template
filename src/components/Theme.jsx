@@ -6,20 +6,20 @@ import inclusiveLearning from "../assets/c.png";
 const THEME_PARAGRAPHS = [
   {
     id: 1,
-    title: "Teaching Abroad",
-    desc: "Exploring the challenges and growth of educators teaching in diverse cultures, promoting global understanding and collaboration.",
+    title: "AI in the Classroom",
+    desc: "Exploring the integration of AI tools in Tunisian education while respecting academic integrity and ethical boundaries.",
     photo: teachingAbroad,
   },
   {
     id: 2,
-    title: "The Future of Teaching",
-    desc: "Examining how technology is reshaping education, from digital tools to innovative learning environments.",
+    title: "The Teacher of Tomorrow",
+    desc: "Rethinking pedagogy by evolving the role of the educator from a “knowledge transmitter” to a “facilitator” of discovery in the digital age.",
     photo: futureOfTeaching,
   },
   {
     id: 3,
-    title: "Inclusive & Adaptive Learning",
-    desc: "Emphasizing personalized education to support diverse learning styles, neurodiversity, and creative thinking.",
+    title: "Studying and Teaching Abroad",
+    desc: "Analyzing educational contrasts on a global scale and how international exchanges foster student autonomy and independent thinking.",
     photo: inclusiveLearning,
   }
 ];

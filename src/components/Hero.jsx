@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const STATS = [
-  { num: "60", suffix: "+", label: "Host Countries" },
+  { num: "5", suffix: "+", label: "Host Countries" },
   { num: "18", suffix: "+", label: "Min Age" },
-  { num: "10K", suffix: "+", label: "Global Teachers" },
+  { num: "300", suffix: "+", label: "Global Teachers" },
 ];
 
 function Countdown() {
@@ -140,7 +140,7 @@ export default function Hero() {
         fontFamily: "var(--font-display)",
         animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards",
       }}>
-        T4Teaching is AIESEC's micro-event for aspiring global educators — connecting passionate young people aged 18–30 with real international teaching opportunities in 60+ countries.
+        T4Teaching is AIESEC's micro-event for aspiring global educators — connecting passionate young people aged 18–30 with real international teaching opportunities in 5+ countries.
       </p>
 
       {/* CTAs */}

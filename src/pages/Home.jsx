@@ -29,12 +29,12 @@ export default function Home() {
           whiteSpace: "nowrap", width: "max-content",
         }}>
           {[...Array(2)].flatMap(() =>
-            ["📚 Global Teacher Program", "✈️ 60+ Host Countries", "🏫 April 18, 2026",
+            ["📚 Global Teacher Program", "✈️ 5+ Host Countries", "🏫 April 18, 2026",
               "🎓 Free to attend", "🤝 Real Placements", "💡 Expert Educators"].map((t, i) => (
-              <span key={t + i} style={{ fontSize: 13, color: "var(--text-muted)", fontWeight: 600 }}>
-                <span style={{ color: "var(--orange)", marginRight: 8 }}>◆</span>{t}
-              </span>
-            ))
+                <span key={t + i} style={{ fontSize: 13, color: "var(--text-muted)", fontWeight: 600 }}>
+                  <span style={{ color: "var(--orange)", marginRight: 8 }}>◆</span>{t}
+                </span>
+              ))
           )}
         </div>
       </div>
