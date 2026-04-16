@@ -30,7 +30,7 @@ export default function Theme() {
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         <SectionLabel
           tag="Our Theme"
-          title="Empowering the Next Generation"
+          title="Empowering Education in the Digital Age"
           sub="Discover the core pillars of our teaching philosophy and what drives our movement forward."
         />
 
